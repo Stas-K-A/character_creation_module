@@ -1,5 +1,5 @@
 # Тестовые данные.
-TEST_DATA: list[tuple] = [
+TEST_DATA: list[tuple[int, str, bool]] = [
     (44, 'success', True),
     (16, 'failure', True),
     (4, 'success', False),
@@ -34,8 +34,8 @@ def main(duel_res: list) -> str:
             current_rep = add_rep(current_rep, rep, effect)
         if result == 'failure':
             current_rep = remove_rep(current_rep, rep, effect)
-    return f'После {len(duel_res)} поединков, репутация персонажа — \
-    {current_rep:.3f} очков.'
+    return f'''После {len(duel_res)} поединков, репутация персонажа
+     — {current_rep:.3f} очков.'''
 
 
 # Тестовый вызов функции main.
